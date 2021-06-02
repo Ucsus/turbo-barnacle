@@ -1,24 +1,22 @@
 "use strict";
 
-console.log('arr' + " - object");
-console.log(4 + "5");
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+console.log(numberOfFilms);
 
-let incr = 10,
-    decr = 10;
+const personaMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-// ++incr;
-// --decr;
+const a = prompt("Один из последних просмотренных фильмов?", ""),
+      b = prompt('На сколько оцените его?', ''),
+      c = prompt("Один из последних просмотренных фильмов?", ""),
+      d = prompt('На сколько оцените его?', '');
 
-console.log(++incr);
-console.log(--decr);
+      personaMovieDB.movies[a] = b;
+      personaMovieDB.movies[c] = d;
 
-console.log(5 % 2);
-
-console.log(2 + 2 * 2 !== '6');
-
-console.log('arr' + " - object");
-
-const isChecked = true,
-    isClose = false;
-
-console.log(isChecked || !isClose);
+console.log(personaMovieDB);
