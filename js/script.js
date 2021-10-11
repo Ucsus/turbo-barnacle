@@ -48,8 +48,22 @@ function detectPersonalLevel() {
     } else {
         console.log("Ошибка");
     }
-    
-    console.log(personaMovieDB);
 }
 
 detectPersonalLevel();
+
+function showMyDB(hidden) {
+    if (!hidden) {
+        console.log(personaMovieDB);
+    }
+}
+
+showMyDB(personaMovieDB.privat);
+
+function writeYourGenres() {
+    for (let i=1; i <=3; i++) {
+            personaMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
+    }
+}
+
+writeYourGenres();
